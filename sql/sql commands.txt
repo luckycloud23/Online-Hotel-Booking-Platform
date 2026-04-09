@@ -1,0 +1,76 @@
+-- 1. Create the database named in your configuration
+CREATE DATABASE IF NOT EXISTS merlune_resort CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE merlune_resort;
+
+-- 2. Create the 'villas' table
+-- We insert your exact villa slugs from `config.php` so the database recognizes them.
+CREATE TABLE IF NOT EXISTS villas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    slug VARCHAR(100) UNIQUE NOT NULL
+);
+
+INSERT INTO villas (name, slug) VALUES 
+('Lagoon Water Villa', 'lagoon-water-villa'),
+('Ocean Pavilion Suite', 'ocean-pavilion-suite'),
+('Garden Sanctuary Villa', 'garden-sanctuary-villa'),
+('Coral Beach Suite', 'coral-beach-suite'),
+('Presidential Estate', 'presidential-estate'),
+('Moonlight Forest Villa', 'moonlight-forest-villa'),
+('Starlight Cove Villa', 'starlight-cove-villa'),
+('Astral Overwater Suite', 'astral-overwater-suite'),
+('Indigo Pavilion', 'indigo-pavilion');
+
+
+-- 3. Create the 'bookings' table
+-- Contains constraints matching your `create-booking.php` columns exactly.
+CREATE TABLE IF NOT EXISTS bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    booking_ref VARCHAR(20) UNIQUE NOT NULL,
+    villa_id INT NOT NULL,
+    checkin DATE NOT NULL,
+    checkout DATE NOT NULL,
+    nights INT NOT NULL,
+    guests INT NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(50) NOT NULL,
+    country VARCHAR(100),
+    special_requests TEXT,
+    transfer_type VARCHAR(50),
+    addons JSON,
+    nightly_rate INT NOT NULL,
+    total_price INT NOT NULL,
+    is_full_moon TINYINT(1) DEFAULT 0,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (villa_id) REFERENCES villas(id) ON DELETE CASCADE
+);
+
+
+-- 4. Create the 'newsletter_subscribers' table
+-- Matching the query in `newsletter.php` to handle active subscriptions.
+CREATE TABLE IF NOT EXISTS newsletter_subscribers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    is_active TINYINT(1) DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- 5. Create the 'contact_messages' table
+-- Matching the query in `contact.php` for customer inquiries.
+CREATE TABLE IF NOT EXISTS contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(50),
+    subject VARCHAR(200),
+    travel_date_from DATE NULL,
+    travel_date_to DATE NULL,
+    message TEXT NOT NULL,
+    status VARCHAR(50) DEFAULT 'new',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
