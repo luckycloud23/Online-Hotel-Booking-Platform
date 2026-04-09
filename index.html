@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merlune Resort | Night Escape by the Sea</title>
+    <!-- HTML: forms and input fields -->
+    <meta name="description" content="Merlune — where the moon meets the waves. An exclusive night-sky sanctuary in the Andaman Islands offering overwater villas, moonlit dining, and holistic wellness under the stars.">
+    <meta name="keywords" content="Merlune, luxury resort, Andaman Islands, overwater villas, moonlit dining, night resort, wellness retreat">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imgs/main_img.png">
+</head>
+
+<body class="night-sky">
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <header class="starlight-header" id="main-header">
+        <nav class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo" id="nav-logo">
+                <span class="logo-icon">☽</span>
+                <span class="logo-text">Merlune</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="villas.html" class="nav-link">Villas</a></li>
+                <li><a href="dining.html" class="nav-link">Dining</a></li>
+                <li><a href="spa.html" class="nav-link">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <a href="booking.html" class="btn-primary nav-cta" id="nav-book-btn">Book Your Escape</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+                <li><a href="villas.html" class="mobile-nav-link">Villas</a></li>
+                <li><a href="dining.html" class="mobile-nav-link">Dining</a></li>
+                <li><a href="spa.html" class="mobile-nav-link">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html" class="mobile-nav-link">Experiences</a></li>
+                <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary mobile-nav-cta">Book Your Escape</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="home-hero">
+            <!-- Background Image: Merlune Sunset/Night Hero -->
+            <div class="hero-bg" style="background-image: url('imgs/hero_main.png');">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Animated star canvas (optional JS-driven) -->
+            <canvas class="starfield-canvas" id="starfield-canvas"></canvas>
+
+            <div class="hero-content">
+                <p class="hero-preheading">Andaman Islands, India</p>
+                <h1 class="moon-glow" id="hero-title">Merlune</h1>
+                <p class="tagline">Where the moon meets the waves</p>
+                <p class="hero-subtitle">A night-sky sanctuary of overwater villas, moonlit dining, and holistic wellness — cradled by the Andaman Sea.</p>
+
+                <div class="hero-actions">
+                    <a href="#brand-story" class="btn-outline btn-lg" id="hero-discover-btn">Discover Merlune</a>
+                </div>
+
+                <!-- Quick Availability Checker -->
+                <div class="hero-availability" id="quick-availability">
+                    <div class="availability-field">
+                        <label for="checkin-date">Arrival</label>
+                        <input type="date" id="checkin-date" name="checkin" class="date-input">
+                    </div>
+                    <div class="availability-field">
+                        <label for="checkout-date">Departure</label>
+                        <input type="date" id="checkout-date" name="checkout" class="date-input">
+                    </div>
+                    <div class="availability-field">
+                        <label for="guests-count">Guests</label>
+                        <select id="guests-count" name="guests" class="select-input">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <a href="booking.html" class="btn-primary" id="check-availability-btn">Reserve Your Night Escape</a>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator" id="scroll-indicator">
+                <span class="scroll-text">Scroll to explore</span>
+                <span class="scroll-arrow">⌄</span>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 2 — BRAND STORY / INTRO (Images 2, 3)
+             Two-column layout: tall main photo + text + small accent photo
+             ============================================ -->
+        <section class="brand-story" id="brand-story">
+            <div class="container">
+                <div class="brand-story-grid">
+                    <!-- Left Column: Main stacked photo -->
+                    <div class="brand-story-image-main">
+                        <!-- Image 2: Overwater villa deck at dusk, lantern, moon rising -->
+                        <img src="imgs/img2.png" alt="Overwater villa deck at dusk with lantern light and moonrise over the Andaman lagoon" class="story-img-tall" loading="lazy">
+                    </div>
+
+                    <!-- Right Column: Text + accent photo -->
+                    <div class="brand-story-content">
+                        <span class="section-label">Our Story</span>
+                        <h2 class="section-title">Born of Sea &amp; Moon</h2>
+                        <p class="story-lead">
+                            Merlune was dreamed into existence on a moonlit beach in the Andaman Islands — where bioluminescent waves whisper against ancient coral shores, and the night sky is closer than anywhere else on earth.
+                        </p>
+                        <p class="story-body">
+                            Named for the union of <em>mer</em> (sea) and <em>lune</em> (moon), our sanctuary is a place where time dissolves into tides and starlight. Every villa, every meal, every moment is designed to immerse you in the quiet majesty of the night.
+                        </p>
+                        <p class="story-body">
+                            This is not merely a resort. It is a lunar passage — an invitation to slow down, look up, and rediscover the elemental beauty that the modern world has forgotten.
+                        </p>
+
+                        <!-- Image 3: Bioluminescent plankton accent photo -->
+                        <div class="brand-story-image-accent">
+                            <img src="imgs/img3.png" alt="Bioluminescent blue plankton glowing at the waterline of a dark Andaman beach at night" class="story-img-accent" loading="lazy">
+                            <span class="image-caption">Bioluminescent shores of the Andaman Sea</span>
+                        </div>
+
+                        <a href="gallery.html" class="btn-outline" id="story-gallery-btn">Explore Our World</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 3 — VILLAS PREVIEW (Images 4–8)
+             Five villa cards with night-view photos
+             ============================================ -->
+        <section class="villas-preview" id="villas-preview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Accommodations</span>
+                    <h2 class="section-title">Sleep Under the Stars</h2>
+                    <p class="section-subtitle">Nine extraordinary sanctuaries — each a private world of moonlight, water, and whispered luxury.</p>
+                </div>
+
+                <div class="villa-grid" id="villa-container">
+
+                    <!-- Villa 1: Lagoon Water Villa (Image 4) -->
+                    <article class="villa-card" id="villa-lagoon">
+                        <div class="villa-card-image">
+                            <img src="imgs/img4.png" alt="Interior of the Lagoon Water Villa at night" loading="lazy">
+                            <span class="villa-badge">Signature</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Lagoon Water Villa</h3>
+                            <p class="villa-brief">Suspended over a living reef, with glass floors revealing luminous coral worlds beneath your feet.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹85,000 <small>/night</small></span>
+                                <a href="villas.html#lagoon-water-villa" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 2: Ocean Pavilion Suite (Image 5) -->
+                    <article class="villa-card" id="villa-ocean">
+                        <div class="villa-card-image">
+                            <img src="imgs/img5.png" alt="Clifftop Ocean Pavilion Suite at night" loading="lazy">
+                            <span class="villa-badge">Cliffside</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Ocean Pavilion Suite</h3>
+                            <p class="villa-brief">Perched on the cliff's edge, where your private infinity pool dissolves into the Andaman horizon.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹1,10,000 <small>/night</small></span>
+                                <a href="villas.html#ocean-pavilion-suite" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 3: Garden Sanctuary Villa (Image 6) -->
+                    <article class="villa-card" id="villa-garden">
+                        <div class="villa-card-image">
+                            <img src="imgs/img6.png" alt="Private villa garden at night" loading="lazy">
+                            <span class="villa-badge">Garden</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Garden Sanctuary Villa</h3>
+                            <p class="villa-brief">Hidden within a candlelit jungle garden, where fireflies dance and night-blooming jasmine scents the air.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹65,000 <small>/night</small></span>
+                                <a href="villas.html#garden-sanctuary-villa" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 4: Coral Beach Suite (Image 7) -->
+                    <article class="villa-card" id="villa-coral">
+                        <div class="villa-card-image">
+                            <img src="imgs/img7.png" alt="Beachfront Coral Beach Suite at night" loading="lazy">
+                            <span class="villa-badge">Beachfront</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Coral Beach Suite</h3>
+                            <p class="villa-brief">White sand at your door, fire dancing at the pool's edge, and the Indian Ocean singing you to sleep.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹75,000 <small>/night</small></span>
+                                <a href="villas.html#coral-beach-suite" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 5: Moonlight Forest Villa -->
+                    <article class="villa-card" id="villa-moonlight-forest">
+                        <div class="villa-card-image">
+                            <img src="imgs/moonlight_forest_villa.png" alt="Moonlight Forest Villa — silver banyans" loading="lazy">
+                            <span class="villa-badge">Forest</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Moonlight Forest Villa</h3>
+                            <p class="villa-brief">An immersion in the ancient wild forest, where silver banyans stand tall and the earth glows.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹70,000 <small>/night</small></span>
+                                <a href="villas.html#moonlight-forest-villa" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 6: Starlight Cove Villa -->
+                    <article class="villa-card" id="villa-starlight-cove">
+                        <div class="villa-card-image">
+                            <img src="imgs/starlight_cove_villa.png" alt="Starlight Cove Villa — secret beach" loading="lazy">
+                            <span class="villa-badge">Secluded</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Starlight Cove Villa</h3>
+                            <p class="villa-brief">A secluded cove sanctuary carved into volcanic rock, featuring a secret stone path to a private beach.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹95,000 <small>/night</small></span>
+                                <a href="villas.html#starlight-cove-villa" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 7: The Astral Overwater Suite -->
+                    <article class="villa-card" id="villa-astral">
+                        <div class="villa-card-image">
+                            <img src="imgs/img20.png" alt="The Astral Overwater Suite — starlight lagoon" loading="lazy">
+                            <span class="villa-badge">Lagoon</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">The Astral Overwater Suite</h3>
+                            <p class="villa-brief">A panoramic sanctuary suspended over the lagoon, featuring a private netted hammock for sleeping under the stars.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹1,05,000 <small>/night</small></span>
+                                <a href="villas.html#astral-overwater-suite" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 8: The Indigo Pavilion -->
+                    <article class="villa-card" id="villa-indigo">
+                        <div class="villa-card-image">
+                            <img src="imgs/hotel_indigo.png" alt="The Indigo Pavilion — overwater sanctuary" loading="lazy">
+                            <span class="villa-badge">Lagoon Sanctuary</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">The Indigo Pavilion</h3>
+                            <p class="villa-brief">A house of water and light. Eight overwater pavilions suspended over a glowing bioluminescent lagoon.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹90,000 <small>/night</small></span>
+                                <a href="villas.html#indigo-pavilion" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Villa 9: Presidential Estate (Flagship - Moved to end) -->
+                    <article class="villa-card" id="villa-presidential">
+                        <div class="villa-card-image">
+                            <img src="imgs/img8.png" alt="Presidential Estate at night" loading="lazy">
+                            <span class="villa-badge">Flagship</span>
+                        </div>
+                        <div class="villa-card-content">
+                            <h3 class="villa-name">Presidential Estate</h3>
+                            <p class="villa-brief">A private headland kingdom — three wings, a 22-metre infinity pool, and an overwater pavilion for those who command the night.</p>
+                            <div class="villa-card-footer">
+                                <span class="villa-price">From ₹3,50,000 <small>/night</small></span>
+                                <a href="villas.html#presidential-estate" class="btn-more">More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-footer">
+                    <a href="villas.html" class="btn-primary btn-lg" id="view-all-villas-btn">View All Villas</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 4 — DINING PREVIEW (Images 9–14)
+             Eight restaurant cards
+             ============================================ -->
+        <section class="dining-preview" id="dining-preview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Culinary Passage</span>
+                    <h2 class="section-title">Dining by Starlight</h2>
+                    <p class="section-subtitle">Nine extraordinary restaurants and snack outposts — from underwater coral halls to rooftop moonbars — each a passage into flavour and wonder.</p>
+                </div>
+
+                <div class="dining-grid">
+
+                    <!-- Restaurant 1: Tideline (Image 9) -->
+                    <article class="dining-card" id="dining-tideline">
+                        <div class="dining-card-image">
+                            <img src="imgs/img9.png" alt="Tideline — open-air beachfront restaurant at night with candlelit white linen tables over the waterline" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Tideline</h3>
+                            <span class="dining-cuisine">Contemporary Coastal</span>
+                            <p class="dining-brief">Open-air tables suspended above the night tide. Candlelight, white linen, and the Andaman Sea as your soundtrack.</p>
+                            <a href="dining.html#tideline" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 2: Nautilus (Image 10) -->
+                    <article class="dining-card" id="dining-nautilus">
+                        <div class="dining-card-image">
+                            <img src="imgs/img10.png" alt="Nautilus — underwater restaurant with glass walls revealing deep ocean, coral, and manta rays" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Nautilus</h3>
+                            <span class="dining-cuisine">Underwater Fine Dining</span>
+                            <p class="dining-brief">Five metres below the surface. Glass walls reveal coral gardens, gliding manta rays, and the silent world of the deep.</p>
+                            <a href="dining.html#nautilus" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 3: The Moonbar (Image 11) -->
+                    <article class="dining-card" id="dining-moonbar">
+                        <div class="dining-card-image">
+                            <img src="imgs/img11.png" alt="The Moonbar — rooftop cocktail bar at midnight with luminescent cocktails and Andaman archipelago horizon" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">The Moonbar</h3>
+                            <span class="dining-cuisine">Rooftop Cocktails &amp; Tapas</span>
+                            <p class="dining-brief">The highest point on the island. Alchemical cocktails, the entire archipelago at your feet, and stars so close you could touch them.</p>
+                            <a href="dining.html#moonbar" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 4: Saffron Garden (Image 12) -->
+                    <article class="dining-card" id="dining-saffron">
+                        <div class="dining-card-image">
+                            <img src="imgs/img12.png" alt="Saffron Garden — outdoor Indian restaurant inside a tropical spice garden at night with iron lanterns and fireflies" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Saffron Garden</h3>
+                            <span class="dining-cuisine">Indian Spice Kitchen</span>
+                            <p class="dining-brief">Dining among the spice trees. Iron lanterns, fireflies, copper vessels, and flavours that honour three thousand years of Indian culinary art.</p>
+                            <a href="dining.html#saffron-garden" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 5: Coral Table (Image 13) -->
+                    <article class="dining-card" id="dining-coral-table">
+                        <div class="dining-card-image">
+                            <img src="imgs/img13.png" alt="Coral Table — intimate chef's table with dramatic plating, kitchen fire, and copper pans" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Coral Table</h3>
+                            <span class="dining-cuisine">Chef's Table Experience</span>
+                            <p class="dining-brief">Eight seats. One chef. A ten-course narrative told in fire, gold leaf, and the ocean's own harvest. Reservation essential.</p>
+                            <a href="dining.html#coral-table" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 6: The Drift (Image 14) -->
+                    <article class="dining-card" id="dining-drift">
+                        <div class="dining-card-image">
+                            <img src="imgs/img14.png" alt="The Drift — floating breakfast tray on a moonlit lagoon at early dawn with tropical fruits, croissant, and copper coffee press" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">The Drift</h3>
+                            <span class="dining-cuisine">Floating Breakfast</span>
+                            <p class="dining-brief">Your morning begins on the water. A hand-carved tray of tropical fruits and Andaman coffee floats to your villa.</p>
+                            <a href="dining.html#the-drift" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 7: Zenith (Image 50) -->
+                    <article class="dining-card" id="dining-zenith">
+                        <div class="dining-card-image">
+                            <img src="imgs/img50.png" alt="Zenith — premium dining experience" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Zenith</h3>
+                            <span class="dining-cuisine">Modern Fusion</span>
+                            <p class="dining-brief">A celestial height of gastronomy where Asian soul meets Indian fire. Named for the peak of the night sky.</p>
+                            <a href="dining.html#zenith" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 8: The Moonstone Deli (Image 51) -->
+                    <article class="dining-card" id="dining-moonstone">
+                        <div class="dining-card-image">
+                            <img src="imgs/51.png" alt="The Moonstone Deli — artisan bakery and snacks at night, warm interior glow" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">The Moonstone Deli</h3>
+                            <span class="dining-cuisine">Artisan Pantry & Snacks</span>
+                            <p class="dining-brief">The resort's late-night heart. Gourmet midnight hampers, moon-shaped croissants, and artisan snacks for your midnight cravings.</p>
+                            <a href="dining.html#moonstone-deli" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 9: Saltwater Snaps (Image 52) -->
+                    <article class="dining-card" id="dining-saltwater">
+                        <div class="dining-card-image">
+                            <img src="imgs/52.png" alt="Saltwater Snaps — beachside illuminated snack hut at night with moonlit ocean" loading="lazy">
+                        </div>
+                        <div class="dining-card-content">
+                            <h3 class="dining-name">Saltwater Snaps</h3>
+                            <span class="dining-cuisine">Coastal Small Bites</span>
+                            <p class="dining-brief">Quick, vibrant flavors at the ocean's edge. Coconut-crusted bites, fresh fruit shots, and sea-salt savory snacks.</p>
+                            <a href="dining.html#saltwater-snaps" class="btn-more">More</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-footer">
+                    <a href="dining.html" class="btn-primary btn-lg" id="explore-dining-btn">Explore All Dining</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 5 — SPA & WELLNESS PREVIEW (Images 15, 16)
+             Split layout: image left, text right
+             ============================================ -->
+        <section class="spa-preview" id="spa-preview">
+            <div class="container">
+                <div class="spa-preview-grid">
+                    <!-- Left: Main spa image -->
+                    <div class="spa-preview-image">
+                        <!-- Image 15: Overwater spa treatment room at night -->
+                        <img src="imgs/img15.png" alt="Open-air overwater spa treatment room at night with hanging lanterns, floating flower bowls, and moonlit sea beyond bamboo screens" loading="lazy">
+                    </div>
+
+                    <!-- Right: Content + accent image -->
+                    <div class="spa-preview-content">
+                        <span class="section-label">Wellness</span>
+                        <h2 class="section-title">The Lunar Spa</h2>
+                        <p class="spa-lead">Where ancient Ayurvedic wisdom meets the healing rhythm of the tides. Our overwater spa sanctuary offers treatments choreographed to the phases of the moon.</p>
+
+                        <ul class="spa-highlights">
+                            <li>
+                                <span class="spa-highlight-icon">🌑</span>
+                                <div>
+                                    <strong>Moonwater Ritual</strong>
+                                    <p>Warm basalt stones, Andaman sea minerals, and moonlight — a 90-minute journey.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="spa-highlight-icon">🧿</span>
+                                <div>
+                                    <strong>Shirodhara — The Third Eye</strong>
+                                    <p>Ancient Ayurvedic oil therapy for deep stillness and mental clarity.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="spa-highlight-icon">🌊</span>
+                                <div>
+                                    <strong>Thalasso Hydrotherapy</strong>
+                                    <p>Hot &amp; cold sea-stone plunge pools at the ocean's edge.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Image 16: Spa flat lay accent -->
+                        <div class="spa-preview-accent">
+                            <img src="imgs/img16.png" alt="Spa treatment flat lay — copper bowl of warm oil, volcanic basalt stones, jasmine petals, white linen towel, and lit candle on dark stone" loading="lazy">
+                        </div>
+
+                        <a href="spa.html" class="btn-primary" id="discover-wellness-btn">Discover Wellness</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 6 — GALLERY STRIP (Images 17–24)
+             Auto-scrolling horizontal image strip
+             ============================================ -->
+        <section class="gallery-strip" id="gallery-strip">
+            <div class="section-header">
+                <span class="section-label">Visual Journey</span>
+                <h2 class="section-title">Glimpses of the Night</h2>
+            </div>
+
+            <div class="gallery-scroll-track" id="gallery-scroll-track">
+                <div class="gallery-scroll-inner">
+
+                    <!-- Image 17: Underwater moonlight, sea turtle silhouette -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img17.png" alt="Underwater view looking up through Andaman Sea surface at night — moonlight diffracting, coral silhouettes, sea turtle" loading="lazy">
+                    </div>
+
+                    <!-- Image 18: Cocktail held over Moonbar rooftop -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img18.png" alt="Hand holding blue-lit butterfly pea gin cocktail over Moonbar rooftop edge with ocean and stars" loading="lazy">
+                    </div>
+
+                    <!-- Image 19: Bioluminescent waves on dark beach -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img19.png" alt="Bioluminescent waves on black sand Andaman beach — blue-green glow in foam, moon and stars above" loading="lazy">
+                    </div>
+
+                    <!-- Image 20: Aerial overwater villas with moon reflection -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img20.png" alt="Aerial drone shot of overwater villa complex at night with full moon perfectly reflected in still lagoon" loading="lazy">
+                    </div>
+
+                    <!-- Image 21: Private stone bathtub with rose petals -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img21.png" alt="Private outdoor stone bathtub on villa deck at night filled with rose petals, candles, and moonlight" loading="lazy">
+                    </div>
+
+                    <!-- Image 22: Sea turtle in bioluminescent water -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img22.png" alt="Sea turtle swimming through bioluminescent water at night — blue-green glow, Andaman reef below" loading="lazy">
+                    </div>
+
+                    <!-- Image 23: Resort from the sea at night -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img23.png" alt="Merlune resort viewed from the sea at night — overwater villas glowing amber, moon directly above, reflections in black water" loading="lazy">
+                    </div>
+
+                    <!-- Image 24: Romantic beach dinner table -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img24.png" alt="Table set for two on empty beach at night — white linen, candles, flowers, wine glasses, moonlit ocean behind" loading="lazy">
+                    </div>
+
+                    <!-- Duplicate set for seamless infinite scroll -->
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img17.png" alt="Underwater moonlight view" loading="lazy">
+                    </div>
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img18.png" alt="Blue cocktail at Moonbar" loading="lazy">
+                    </div>
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img19.png" alt="Bioluminescent waves" loading="lazy">
+                    </div>
+                    <div class="gallery-strip-item">
+                        <img src="imgs/img20.png" alt="Aerial villa moonlight" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <a href="gallery.html" class="btn-outline btn-lg" id="view-full-gallery-btn">View Full Gallery</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 7 — EXPERIENCES PREVIEW (subset of 42–49)
+             Highlights of curated experiences
+             ============================================ -->
+        <section class="experiences-preview" id="experiences-preview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Curated Experiences</span>
+                    <h2 class="section-title">After Dark Adventures</h2>
+                    <p class="section-subtitle">The night reveals a world most resorts never show you. At Merlune, darkness is an invitation.</p>
+                </div>
+
+                <div class="experiences-grid">
+
+                    <!-- Experience: Bioluminescent Kayak (Image 43) -->
+                    <article class="experience-card experience-card-large" id="exp-bioluminescent-kayak">
+                        <div class="experience-card-image">
+                            <img src="imgs/img43.png" alt="Two wooden kayaks on still black lagoon at night — paddles disturbing bioluminescent blue-green plankton, stars reflected in water" loading="lazy">
+                        </div>
+                        <div class="experience-card-content">
+                            <h3 class="experience-name">Bioluminescent Kayak</h3>
+                            <p class="experience-brief">Paddle through a lagoon that glows with every stroke. Blue-green bioluminescent plankton light up the darkness around you like liquid starlight.</p>
+                            <span class="experience-meta">Duration: 90 min · Best on new moon nights</span>
+                        </div>
+                    </article>
+
+                    <!-- Experience: Stargazing Observatory (Image 44) -->
+                    <article class="experience-card" id="exp-stargazing">
+                        <div class="experience-card-image">
+                            <img src="imgs/img44.png" alt="Rooftop observatory at night with brass telescope pointed at Milky Way, lantern on railing, dark sea horizon" loading="lazy">
+                        </div>
+                        <div class="experience-card-content">
+                            <h3 class="experience-name">Stargazing Observatory</h3>
+                            <p class="experience-brief">Our resident astronomer guides you through constellations invisible in city skies. The Milky Way has never been this close.</p>
+                            <span class="experience-meta">Nightly · Complimentary for guests</span>
+                        </div>
+                    </article>
+
+                    <!-- Experience: Private Coral Dive (Image 42) -->
+                    <article class="experience-card" id="exp-coral-dive">
+                        <div class="experience-card-image">
+                            <img src="imgs/img42.png" alt="Diver hovering above vast Andaman coral reef in deep blue water, sea turtle nearby, bioluminescent coral edges" loading="lazy">
+                        </div>
+                        <div class="experience-card-content">
+                            <h3 class="experience-name">Private Coral Dive</h3>
+                            <p class="experience-brief">Descend into the Andaman's living coral cathedrals with a private dive guide. Sea turtles, reef sharks, and luminous coral gardens await.</p>
+                            <span class="experience-meta">All experience levels · Private guide included</span>
+                        </div>
+                    </article>
+
+                    <!-- Experience: Sea Turtle Conservation (Image 47) -->
+                    <article class="experience-card" id="exp-turtle-conservation">
+                        <div class="experience-card-image">
+                            <img src="imgs/img47.png" alt="Baby olive ridley sea turtle hatchling on dark wet sand at night heading toward bioluminescent water, moonlit" loading="lazy">
+                        </div>
+                        <div class="experience-card-content">
+                            <h3 class="experience-name">Sea Turtle Conservation</h3>
+                            <p class="experience-brief">Witness olive ridley hatchlings make their first journey to the sea under moonlight. A partnership with local marine biologists.</p>
+                            <span class="experience-meta">Seasonal (Nov–Mar) · By special arrangement</span>
+                        </div>
+                    </article>
+
+                    <!-- Experience: Andaman Rainforest Trek (Image 48) -->
+                    <article class="experience-card" id="exp-rainforest-trek">
+                        <div class="experience-card-image">
+                            <img src="imgs/img48.png" alt="Andaman rainforest at dawn — blue light shafts through canopy" loading="lazy">
+                        </div>
+                        <div class="experience-card-content">
+                            <h3 class="experience-name">Andaman Rainforest Trek</h3>
+                            <p class="experience-brief">Enter the ancient rainforest at first light when mist hangs between the trees and rare Hill Myna birds begin their calls.</p>
+                            <span class="experience-meta">Duration: 3 hours · Naturalist guide included</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="section-footer">
+                    <a href="experiences.html" class="btn-primary btn-lg" id="all-experiences-btn">All Experiences</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 8 — LOCATION (Image 25)
+             Andaman Islands aerial with resort info
+             ============================================ -->
+        <section class="location-section" id="location">
+            <div class="location-bg">
+                <!-- Image 25: Aerial of Andaman Islands at blue hour -->
+                <img src="imgs/img25.png" alt="Aerial photograph of the Andaman Islands from above at blue hour — deep navy ocean, jungle islands with white sand edges" loading="lazy">
+                <div class="location-overlay"></div>
+            </div>
+
+            <div class="location-content">
+                <span class="section-label">Location</span>
+                <h2 class="section-title">The Edge of the World</h2>
+                <p class="location-text">
+                    Merlune is located on a private island in the Andaman archipelago, India — 1,200 kilometres from the mainland, surrounded by pristine coral reefs and ancient rainforest. Accessible by seaplane from Port Blair (45 min) or private speedboat transfer.
+                </p>
+
+                <div class="location-details">
+                    <div class="location-detail">
+                        <span class="detail-icon">✈️</span>
+                        <strong>Nearest Airport</strong>
+                        <p>Veer Savarkar International Airport, Port Blair (IXZ)</p>
+                    </div>
+                    <div class="location-detail">
+                        <span class="detail-icon">🛥️</span>
+                        <strong>Resort Transfer</strong>
+                        <p>45 min by seaplane or 90 min by private speedboat</p>
+                    </div>
+                    <div class="location-detail">
+                        <span class="detail-icon">🌡️</span>
+                        <strong>Climate</strong>
+                        <p>Tropical — 25°C to 32°C year round. Best: Oct–May</p>
+                    </div>
+                </div>
+
+                <!-- Moon phase widget placeholder -->
+                <div class="moon-phase-widget" id="moon-phase-widget">
+                    <span class="moon-emoji" id="moon-emoji">🌔</span>
+                    <span class="moon-phase-text" id="moon-phase-text">Current Moon Phase</span>
+                </div>
+
+                <a href="contact.html" class="btn-outline" id="plan-journey-btn">Plan Your Journey</a>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             SECTION 9 — NEWSLETTER / CTA
+             Final call to action
+             ============================================ -->
+        <section class="newsletter-cta" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 class="section-title">Stay Beneath the Same Moon</h2>
+                    <p class="newsletter-text">Join the Merlune circle. Receive moonlit dispatches — exclusive offers, celestial events above the Andaman, and invitations to experiences that exist only in the dark.</p>
+
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required class="newsletter-input" aria-label="Email address for newsletter">
+                            <button type="submit" class="btn-primary" id="newsletter-submit-btn">Join the Circle</button>
+                        </div>
+                        <p class="newsletter-disclaimer">No spam. Unsubscribe with one click. We respect the quiet.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand -->
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">☽</span>
+                        <span class="logo-text">Merlune</span>
+                    </a>
+                    <p class="footer-tagline">Where the moon meets the waves.</p>
+                    <p class="footer-address">Private Island, Andaman &amp; Nicobar Islands, India 744101</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="villas.html">Villas</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Guest Info -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Guest Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Getting Here</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Press &amp; Media</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <a href="tel:+911234567890">+91 1234567890</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            <a href="mailto:reservations@merlune.com">reservations@merlune.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon">☽</span>
+                            <a href="https://wa.me/911234567890" target="_blank" rel="noopener">WhatsApp Concierge</a>
+                        </li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+                        <a href="#" class="social-link" aria-label="Pinterest">Pinterest</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Merlune Resort. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Preferences</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/merlune-main.js"></script>
+    <script src="js/starfield.js"></script>
+    <script>
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('newsletter-submit-btn');
+        const emailInput = document.getElementById('newsletter-email');
+        btn.disabled = true; btn.textContent = 'Joining...';
+        try {
+            const res = await fetch('api/newsletter.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: emailInput.value })
+            });
+            const result = await res.json();
+            alert('🌙 ' + (result.message || 'Welcome to the circle.'));
+            if (result.success) emailInput.value = '';
+        } catch (err) {
+            alert('Network error. Please try again.');
+        }
+        btn.disabled = false; btn.textContent = 'Join the Circle';
+    });
+
+    // Check Availability button → redirect to booking
+    document.getElementById('check-availability-btn').addEventListener('click', () => {
+        const ci = document.getElementById('checkin-date').value;
+        const co = document.getElementById('checkout-date').value;
+        const guests = document.getElementById('guests-count').value;
+        window.location.href = `booking.html?checkin=${ci}&checkout=${co}&guests=${guests}`;
+    });
+    </script>
+</body>
+</html>

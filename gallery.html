@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Merlune Resort — Andaman Islands</title>
+    <meta name="description" content="A visual journey through Merlune — from bioluminescent shores and moonlit villas to underwater coral worlds. Dusk to dawn in the Andaman Islands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="imgs/main_img.png">
+</head>
+<body class="night-sky">
+
+    <!-- NAVIGATION -->
+    <header class="starlight-header" id="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="villas.html" class="nav-link">Villas</a></li>
+                <li><a href="dining.html" class="nav-link">Dining</a></li>
+                <li><a href="spa.html" class="nav-link">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="btn-primary nav-cta">Book Your Escape</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+        </nav>
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="villas.html">Villas</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary mobile-nav-cta">Book Your Escape</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero page-hero-compact" id="gallery-hero">
+            <div class="page-hero-bg" style="background-image: url('imgs/img20.png');"><div class="hero-overlay"></div></div>
+            <div class="page-hero-content">
+                <span class="section-label">Visual Journey</span>
+                <h1 class="moon-glow">Gallery</h1>
+                <p class="page-hero-subtitle">Dusk to dawn — the Merlune experience captured in light, shadow, and silence.</p>
+            </div>
+        </section>
+
+        <!-- GALLERY FILTERS -->
+        <section class="gallery-filters" id="gallery-filters">
+            <div class="container">
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                    <button class="filter-btn" data-filter="resort" id="filter-resort">Resort</button>
+                    <button class="filter-btn" data-filter="underwater" id="filter-underwater">Underwater</button>
+                    <button class="filter-btn" data-filter="nature" id="filter-nature">Nature</button>
+                    <button class="filter-btn" data-filter="dining" id="filter-dining">Dining</button>
+                    <button class="filter-btn" data-filter="wellness" id="filter-wellness">Wellness</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY GRID -->
+        <section class="gallery-masonry" id="gallery-masonry">
+            <div class="container">
+                <div class="masonry-grid" id="masonry-grid">
+
+                    <!-- Image 17: Underwater moonlight, sea turtle silhouette -->
+                    <div class="masonry-item masonry-tall" data-category="underwater">
+                        <img src="imgs/img17.png" alt="Underwater view looking up through Andaman Sea at night — moonlight diffracting, coral silhouettes, sea turtle" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Moonlight Through the Depths</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 18: Cocktail over Moonbar -->
+                    <div class="masonry-item" data-category="dining">
+                        <img src="imgs/img18.png" alt="Blue-lit butterfly pea gin cocktail at Moonbar rooftop, ocean and stars behind" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Lunar Eclipse Cocktail — The Moonbar</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 19: Bioluminescent waves -->
+                    <div class="masonry-item masonry-wide" data-category="nature">
+                        <img src="imgs/img19.png" alt="Bioluminescent waves on black sand Andaman beach — blue-green glow, moon and stars" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Bioluminescent Shores</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 20: Aerial villas with moon -->
+                    <div class="masonry-item masonry-wide" data-category="resort">
+                        <img src="imgs/img20.png" alt="Aerial drone shot of overwater villas at night with full moon perfectly reflected in still lagoon" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Moon Mirror — Aerial View</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 21: Private bathtub -->
+                    <div class="masonry-item" data-category="wellness">
+                        <img src="imgs/img21.png" alt="Private stone bathtub on villa deck at night, rose petals, candles, moonlight" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Private Villa Bathing Ritual</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 22: Sea turtle bioluminescent -->
+                    <div class="masonry-item masonry-tall" data-category="underwater">
+                        <img src="imgs/img22.png" alt="Sea turtle swimming through bioluminescent water at night, blue-green glow, Andaman reef" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Turtle in Bioluminescent Water</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 23: Resort from sea -->
+                    <div class="masonry-item masonry-wide" data-category="resort">
+                        <img src="imgs/img23.png" alt="Merlune resort from the sea at night — villas glowing amber, moon above, reflections" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Merlune from the Sea</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 24: Beach dinner -->
+                    <div class="masonry-item" data-category="dining">
+                        <img src="imgs/img24.png" alt="Romantic table for two on beach at night — white linen, candles, wine glasses, moonlit ocean" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Moonlit Beach Dinner</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 1: Hero aerial (resort category) -->
+                    <div class="masonry-item masonry-wide" data-category="resort">
+                        <img src="imgs/img1.png" alt="Aerial overwater villa complex at night, full moon reflected in ocean, bioluminescent water" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>The Merlune Archipelago</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 2: Villa deck at dusk -->
+                    <div class="masonry-item masonry-tall" data-category="resort">
+                        <img src="imgs/img2.png" alt="Overwater villa deck at dusk, lantern, moon rising over lagoon" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Dusk on the Lagoon Deck</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 3: Bioluminescent shore close-up -->
+                    <div class="masonry-item" data-category="nature">
+                        <img src="imgs/img3.png" alt="Close-up bioluminescent plankton at dark beach waterline, ghostly blue-green glow" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Bioluminescence — Macro</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 15: Spa overwater -->
+                    <div class="masonry-item" data-category="wellness">
+                        <img src="imgs/img15.png" alt="Overwater spa treatment room at night, lanterns, flower bowls, moonlit sea" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>The Lunar Spa</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 25: Andaman aerial -->
+                    <div class="masonry-item masonry-wide" data-category="nature">
+                        <img src="imgs/img25.png" alt="Aerial Andaman Islands at blue hour — navy ocean, jungle islands, white sand edges" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>The Andaman Archipelago</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 43: Bioluminescent kayak -->
+                    <div class="masonry-item" data-category="nature">
+                        <img src="imgs/img43.png" alt="Kayaks on still lagoon at night, paddles disturbing bioluminescent plankton" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>Bioluminescent Kayaking</span>
+                        </div>
+                    </div>
+
+                    <!-- Image 44: Stargazing observatory -->
+                    <div class="masonry-item" data-category="nature">
+                        <img src="imgs/img44.png" alt="Rooftop observatory, brass telescope, Milky Way overhead" loading="lazy">
+                        <div class="masonry-caption">
+                            <span>The Observatory</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX (populated by JS) -->
+        <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-label="Image lightbox" hidden>
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightbox-img">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+            </div>
+            <button class="lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+                    <p class="footer-tagline">Where the moon meets the waves.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="villas.html">Villas</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Guest Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-contact">
+                        <li><a href="tel:+911234567890">+91 1234567890</a></li>
+                        <li><a href="mailto:reservations@merlune.com">reservations@merlune.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Merlune Resort. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/merlune-main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

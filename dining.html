@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================
+         META: Character encoding, viewport, SEO
+         ============================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining | Merlune Resort — Andaman Islands</title>
+    <meta name="description" content="Six extraordinary restaurants at Merlune — from underwater coral halls to rooftop moonbars. Dine beneath the stars on the Andaman Sea.">
+    <!-- HTML: forms and input fields -->
+
+    <!-- ============================================
+         FONTS: Google Fonts (Playfair Display + Inter)
+         ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ============================================
+         STYLESHEETS: Main night-theme CSS
+         ============================================ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="imgs/main_img.png">
+</head>
+<body class="night-sky">
+
+    <!-- ============================================
+         NAVIGATION — Fixed header with logo, links, 
+         booking CTA, and mobile hamburger menu.
+         Shared across all pages.
+         ============================================ -->
+    <header class="starlight-header" id="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="villas.html" class="nav-link">Villas</a></li>
+                <li><a href="dining.html" class="nav-link active">Dining</a></li>
+                <li><a href="spa.html" class="nav-link">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="btn-primary nav-cta">Book Your Escape</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+        </nav>
+        <!-- Mobile nav overlay — toggled by JS -->
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="villas.html">Villas</a></li>
+                <li><a href="dining.html" class="active">Dining</a></li>
+                <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary mobile-nav-cta">Book Your Escape</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================
+             PAGE HERO — Full-width background image
+             with overlay gradient and page title.
+             Uses Image 9 (Tideline restaurant).
+             ============================================ -->
+        <section class="page-hero" id="dining-hero">
+            <div class="page-hero-bg" style="background-image: url('imgs/img9.png');"><div class="hero-overlay"></div></div>
+            <div class="page-hero-content">
+                <span class="section-label">Culinary Journeys</span>
+                <h1 class="moon-glow">Dining</h1>
+                <p class="page-hero-subtitle">Eight extraordinary restaurants — from underwater coral halls to rooftop moonbars — each a passage into flavour and wonder.</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 1 — TIDELINE
+             Image 9 | Beachfront · Open Air
+             Signature restaurant — contemporary coastal
+             seafood on open timber decking over water.
+             ============================================ -->
+        <section class="dining-detail" id="tideline">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-left">
+                    <div class="dining-detail-image">
+                        <!-- Image 9: Candlelit beachfront restaurant over waterline -->
+                        <img src="imgs/img9.png" alt="Tideline — open-air beachfront restaurant at night, candlelit white linen tables above the waterline, moonlit Andaman Sea" loading="lazy">
+                    </div>
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Signature Restaurant</span>
+                        <h2 class="dining-detail-name">Tideline</h2>
+                        <p class="dining-detail-tagline">Where the table meets the tide.</p>
+                        <p class="dining-detail-desc">Perched directly at the waterline on open timber decking, Tideline is where the Andaman Sea arrives on your plate — sustainably caught, simply celebrated. The menu changes with the tide and season, guided entirely by what our fishing boats bring home each morning.</p>
+
+                        <!-- Operating Info Grid -->
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Cuisine</span><span class="info-value">Contemporary Coastal &amp; Seafood</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Open-air, over the waterline</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Lunch 12:30–15:00 · Dinner 19:00–23:00</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">Smart Casual · Barefoot Welcome</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Recommended</span></div>
+                            <div class="dining-info-item"><span class="info-label">Bar</span><span class="info-value">Full Bar · Handcrafted Mocktails</span></div>
+                        </div>
+
+                        <!-- Signature Dishes with Prices -->
+                        <h3 class="dining-signature-title">Small Plates &amp; Starters</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Raw Tuna, Coconut Leche, Coral Salt</em><span class="dining-dish-price">₹ 1,800</span></div>
+                            <div class="dining-dish-row"><em>Truffle Parmesan Oyster Gratin (Half Dozen)</em><span class="dining-dish-price">₹ 2,100</span></div>
+                            <div class="dining-dish-row"><em>Crispy Calamari, Lime Aioli</em><span class="dining-dish-price">₹ 1,450</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">From the Tide (Mains)</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Andaman Butter Crab</em><span class="dining-dish-price">₹ 3,200</span></div>
+                            <div class="dining-dish-row"><em>Moonfire Lobster Thermidor</em><span class="dining-dish-price">₹ 5,800</span></div>
+                            <div class="dining-dish-row"><em>Pan-Seared White Snapper, Citrus Beurre Blanc</em><span class="dining-dish-price">₹ 2,400</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Desserts &amp; Wine</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Coconut Panna Cotta, Andaman Honey</em><span class="dining-dish-price">₹ 900</span></div>
+                            <div class="dining-dish-row"><em>Passionfruit Pavlova</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Sula Chenin Blanc (India)</em><span class="dining-dish-price">₹ 900/Glass</span></div>
+                        </div>
+
+                        <!-- Cuisine Tags -->
+                        <div class="dining-tags">
+                            <span class="dining-pill">Seafood</span>
+                            <span class="dining-pill">Sustainable</span>
+                            <span class="dining-pill">Beachfront</span>
+                            <span class="dining-pill">Vegetarian Options</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 2 — NAUTILUS
+             Image 10 | Underwater · 5m Below Sea
+             Immersive fine dining — glass-walled chamber
+             30 feet underwater. 6-course tasting menu.
+             ============================================ -->
+        <section class="dining-detail dining-detail-alt" id="nautilus">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-right">
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Immersive Experience</span>
+                        <h2 class="dining-detail-name">Nautilus</h2>
+                        <p class="dining-detail-tagline">Five metres below the surface. Another world entirely.</p>
+                        <p class="dining-detail-desc">Descend five metres beneath the Andaman Sea into an entirely glass-walled dining chamber. Manta rays, reef sharks, and schools of midnight-blue fish drift past as you dine on a six-course tasting menu curated by our executive chef. There is no other table like this in India.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Format</span><span class="info-value">6-Course Tasting Menu</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">5m underwater, glass-walled</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Dinner Only · Two Seatings: 19:00 &amp; 21:30</span></div>
+                            <div class="dining-info-item"><span class="info-label">Capacity</span><span class="info-value">14 guests max</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">Formal Elegant · No Heels (Glass Floor)</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Essential — 48hr advance notice</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">The Prelude</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Sea Urchin &amp; Champagne Velouté</em><span class="dining-dish-price">₹ 2,200</span></div>
+                            <div class="dining-dish-row"><em>Bluefin Tuna Tartare, Wasabi Snow</em><span class="dining-dish-price">₹ 2,600</span></div>
+                            <div class="dining-dish-row"><em>Scallop Carpaccio, Yuzu Ponzu</em><span class="dining-dish-price">₹ 2,450</span></div>
+                        </div>
+                        
+                        <h3 class="dining-signature-title">The Abyss (Mains)</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Grilled Barramundi, Seaweed Butter</em><span class="dining-dish-price">₹ 3,400</span></div>
+                            <div class="dining-dish-row"><em>Butter-Poached Andaman Lobster</em><span class="dining-dish-price">₹ 4,800</span></div>
+                            <div class="dining-dish-row"><em>Wagyu A5 Striploin, Truffle Ponzu</em><span class="dining-dish-price">₹ 6,500</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">The Surface (Desserts)</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Salted Caramel, Smoked Coral Sugar</em><span class="dining-dish-price">₹ 1,200</span></div>
+                            <div class="dining-dish-row"><em>Pearl of the Sea (White Chocolate Sphere)</em><span class="dining-dish-price">₹ 1,500</span></div>
+                            <div class="dining-dish-row"><em>Sommelier's Champagne Selection</em><span class="dining-dish-price">₹ 3,500/Glass</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">6 Courses — ₹ 18,000 pp</span>
+                            <span class="dining-pill">Wine Pairing +₹ 9,000</span>
+                            <span class="dining-pill">Max 14 Guests</span>
+                        </div>
+                    </div>
+                    <div class="dining-detail-image">
+                        <!-- Image 10: Underwater glass-walled restaurant -->
+                        <img src="imgs/img10.png" alt="Nautilus — underwater restaurant with glass walls, deep ocean, coral, manta ray, intimate dining" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 3 — THE MOONBAR
+             Image 11 | Rooftop · Cocktail Lounge
+             Highest point on the island. Bespoke 
+             cocktails, tapas, and stargazing.
+             ============================================ -->
+        <section class="dining-detail" id="moonbar">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-left">
+                    <div class="dining-detail-image">
+                        <!-- Image 11: Rooftop bar at midnight with luminescent cocktails -->
+                        <img src="imgs/img11.png" alt="The Moonbar — rooftop cocktail bar at midnight, luminescent blue cocktails, Andaman horizon, stars" loading="lazy">
+                    </div>
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Cocktail Lounge</span>
+                        <h2 class="dining-detail-name">The Moonbar</h2>
+                        <p class="dining-detail-tagline">The highest point on the island. Stars close enough to touch.</p>
+                        <p class="dining-detail-desc">At the very top of Merlune, where the sky opens wide and the horizon stretches without end. Our rooftop bar serves bespoke cocktails inspired by the tides, the stars, and the flora of the Andaman forest. The best seat in the archipelago, every evening.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Offering</span><span class="info-value">Craft Cocktails, Wine, Tapas</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Open rooftop, 360° views</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Sunset 17:30 · Close 01:00</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">Smart Casual · No Flip-Flops After 20:00</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Walk-ins Welcome · Groups Reserved</span></div>
+                            <div class="dining-info-item"><span class="info-label">Entertainment</span><span class="info-value">Live DJ Fri–Sat</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Signature Cocktails</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Merlune Mist — Gin, Lychee, Sea Foam</em><span class="dining-dish-price">₹ 1,400</span></div>
+                            <div class="dining-dish-row"><em>Biolume — Butterfly Pea, Coconut, Rum</em><span class="dining-dish-price">₹ 1,200</span></div>
+                            <div class="dining-dish-row"><em>Spiced Mezcal Margarita</em><span class="dining-dish-price">₹ 1,600</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Classic Spirits &amp; Wine</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Macallan 18 Years Double Cask</em><span class="dining-dish-price">₹ 4,500/Peg</span></div>
+                            <div class="dining-dish-row"><em>Roku Japanese Craft Gin</em><span class="dining-dish-price">₹ 1,100/Peg</span></div>
+                            <div class="dining-dish-row"><em>Moët &amp; Chandon Brut Impérial</em><span class="dining-dish-price">₹ 3,200/Glass</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Moonbar Tapas</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Crispy Calamari, Yuzu Aioli</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Wagyu Beef Sliders, Truffle Mayo</em><span class="dining-dish-price">₹ 1,800</span></div>
+                            <div class="dining-dish-row"><em>Lotus Stem Chips, Sweet Chili Dip</em><span class="dining-dish-price">₹ 750</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">Cocktails</span>
+                            <span class="dining-pill">Stargazing</span>
+                            <span class="dining-pill">Live DJ Fri–Sat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 4 — SAFFRON GARDEN
+             Image 12 | Spice Garden · Indian
+             Outdoor Indian restaurant in a living 
+             tropical spice garden lit by lanterns.
+             ============================================ -->
+        <section class="dining-detail dining-detail-alt" id="saffron-garden">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-right">
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Indian Cuisine</span>
+                        <h2 class="dining-detail-name">Saffron Garden</h2>
+                        <p class="dining-detail-tagline">Dining among the spice trees. Three thousand years of flavour.</p>
+                        <p class="dining-detail-desc">Nestled within a living spice garden lit by lanterns and fireflies, Saffron Garden celebrates the coastal Indian kitchen — Bengali, Chettinad, Konkani, and Andamani traditions woven together over a wood-fire hearth. Grown here, cooked here, eaten here.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Cuisine</span><span class="info-value">Regional Indian, Spice-forward</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Open-air spice garden</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Dinner 19:00–23:30</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">Casual Elegant</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Recommended on Weekends</span></div>
+                            <div class="dining-info-item"><span class="info-label">Bar</span><span class="info-value">Indian Wines · Craft Beer · Classic Mocktails</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Street-Style Appetizers</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Tandoori Malai Broccoli (V)</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Avadh Lamb Galouti Kebab</em><span class="dining-dish-price">₹ 1,650</span></div>
+                            <div class="dining-dish-row"><em>Charcoal-Smoked Paneer Tikka</em><span class="dining-dish-price">₹ 1,050</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Curries &amp; Hearth</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Coconut Prawn Moilee, Appam</em><span class="dining-dish-price">₹ 1,900</span></div>
+                            <div class="dining-dish-row"><em>Chettinad Spiced Lobster</em><span class="dining-dish-price">₹ 3,800</span></div>
+                            <div class="dining-dish-row"><em>Wild Boar Rogan Josh, Saffron Pulao</em><span class="dining-dish-price">₹ 2,400</span></div>
+                            <div class="dining-dish-row"><em>Jackfruit Dum Biryani (V)</em><span class="dining-dish-price">₹ 1,400</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Indian Sweets</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Pistachio &amp; Rose Kulfi</em><span class="dining-dish-price">₹ 850</span></div>
+                            <div class="dining-dish-row"><em>Saffron Rasmalai, Gold Vark</em><span class="dining-dish-price">₹ 950</span></div>
+                            <div class="dining-dish-row"><em>Warm Filter Coffee</em><span class="dining-dish-price">₹ 350</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">Indian</span>
+                            <span class="dining-pill">Coastal</span>
+                            <span class="dining-pill">Vegetarian-Friendly</span>
+                            <span class="dining-pill">Jain Options</span>
+                        </div>
+                    </div>
+                    <div class="dining-detail-image">
+                        <!-- Image 12: Outdoor spice garden restaurant with iron lanterns -->
+                        <img src="imgs/img12.png" alt="Saffron Garden — outdoor Indian restaurant in tropical spice garden, iron lanterns, fireflies, copper vessels" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 5 — CORAL TABLE
+             Image 13 | Chef's Table · 8 Seats Only
+             Most exclusive dining at Merlune. Open
+             kitchen, 9-course menu with wine pairing.
+             ============================================ -->
+        <section class="dining-detail" id="coral-table">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-left">
+                    <div class="dining-detail-image">
+                        <!-- Image 13: Intimate chef's table with dramatic plating -->
+                        <img src="imgs/img13.png" alt="Coral Table — intimate chef's table, dramatic plating, dark stone plate with luminous sphere and gold leaf, kitchen fire" loading="lazy">
+                    </div>
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Chef's Table</span>
+                        <h2 class="dining-detail-name">Coral Table</h2>
+                        <p class="dining-detail-tagline">Eight seats. One chef. One evening.</p>
+                        <p class="dining-detail-desc">Our most intimate venue is an open kitchen experience where Executive Chef Ananya Krishnaswamy cooks directly for her guests — narrating each of the nine courses as they emerge from the fire. The most exclusive table at Merlune.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Format</span><span class="info-value">9-Course Tasting Menu</span></div>
+                            <div class="dining-info-item"><span class="info-label">Capacity</span><span class="info-value">8 guests only</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Friday &amp; Saturday Only · One Seating 20:00</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">Formal · Smart Evening Wear</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Required · 7 Days Advance</span></div>
+                            <div class="dining-info-item"><span class="info-label">Pairing</span><span class="info-value">Curated Wine &amp; Sake Pairing Included</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">The First Spark</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Smoked Oyster, Green Mango Granita</em><span class="dining-dish-price">₹ 1,800</span></div>
+                            <div class="dining-dish-row"><em>Cured Scallop, Finger Lime, Dashi</em><span class="dining-dish-price">₹ 2,400</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">The Ember</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Hokkaido Uni, Charcoal Bao</em><span class="dining-dish-price">₹ 3,100</span></div>
+                            <div class="dining-dish-row"><em>Flamed Miso Black Cod</em><span class="dining-dish-price">₹ 4,500</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">The Blaze &amp; The Ash</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Wagyu, Fermented Black Garlic, Tide Salt</em><span class="dining-dish-price">₹ 6,200</span></div>
+                            <div class="dining-dish-row"><em>Coconut Sphere, Cardamom, Gold Leaf</em><span class="dining-dish-price">₹ 1,500</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">9 Courses — ₹ 28,000 pp</span>
+                            <span class="dining-pill">Pairing Included</span>
+                            <span class="dining-pill">8 Guests Max</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 6 — THE DRIFT
+             Image 14 | Floating · Sunrise Breakfast
+             Private floating breakfast tray delivered 
+             to your villa's lagoon steps at sunrise.
+             ============================================ -->
+        <section class="dining-detail dining-detail-alt" id="the-drift">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-right">
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Sunrise Experience</span>
+                        <h2 class="dining-detail-name">The Drift</h2>
+                        <p class="dining-detail-tagline">Your morning begins on the water.</p>
+                        <p class="dining-detail-desc">A private floating breakfast tray delivered to your villa's lagoon steps at sunrise. Tropical fruits, freshly baked viennoiserie, pressed juices, and your choice of coffee — all arranged on a hand-carved wooden float, drifting gently at your feet as the sun rises over the bay.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Service</span><span class="info-value">Floating Breakfast to your villa</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Sunrise 06:00–09:30 · Pre-book Night Before</span></div>
+                            <div class="dining-info-item"><span class="info-label">Available</span><span class="info-value">Overwater Villas Only</span></div>
+                            <div class="dining-info-item"><span class="info-label">Booking</span><span class="info-value">Book via Butler by 21:00 Prior Evening</span></div>
+                            <div class="dining-info-item"><span class="info-label">Dress</span><span class="info-value">In-Villa · No Dress Code</span></div>
+                            <div class="dining-info-item"><span class="info-label">Beverages</span><span class="info-value">Coconut Water, Artisan Coffee, Pressed Juices</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Floating Breakfast Platters</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Classic Andaman Dawn (Fruit &amp; Pastry)</em><span class="dining-dish-price">₹ 3,200</span></div>
+                            <div class="dining-dish-row"><em>The Epicurean Float (Caviar &amp; Salmon)</em><span class="dining-dish-price">₹ 8,500</span></div>
+                            <div class="dining-dish-row"><em>Champagne Sunrise (Bottle of Moët &amp; Chandon)</em><span class="dining-dish-price">₹ 12,000</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">A La Carte Additions</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Eggs Benedict, Black Truffle Shavings</em><span class="dining-dish-price">₹ 2,400</span></div>
+                            <div class="dining-dish-row"><em>Açaí Bowl, Chia Seeds, Roasted Coconut</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Avocado Toast, Sourdough, Chili Flakes</em><span class="dining-dish-price">₹ 1,300</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Morning Elixirs</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Cold-Pressed Monsoon Green Juice</em><span class="dining-dish-price">₹ 600</span></div>
+                            <div class="dining-dish-row"><em>Artisan Pour-Over Coffee</em><span class="dining-dish-price">₹ 450</span></div>
+                            <div class="dining-dish-row"><em>Saffron Infused Almond Milk</em><span class="dining-dish-price">₹ 500</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">₹ 3,200 per float</span>
+                            <span class="dining-pill">For 2 Guests</span>
+                            <span class="dining-pill">Overwater Villas Only</span>
+                        </div>
+                    </div>
+                    <div class="dining-detail-image">
+                        <!-- Image 14: Floating breakfast tray on lagoon at dawn -->
+                        <img src="imgs/img14.png" alt="The Drift — floating breakfast on moonlit lagoon at dawn, tropical fruits, croissant, copper coffee press" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             RESTAURANT 7 — ZENITH
+             Image 50 | Modern Fusion · Rooftop
+             The peak of gastronomy. Asian soul, 
+             Indian fire, and celestial views.
+             ============================================ -->
+        <section class="dining-detail" id="zenith">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-left">
+                    <div class="dining-detail-image">
+                        <!-- Image 50: Zenith restaurant interior at night -->
+                        <img src="imgs/img50.png" alt="Zenith — premium modern fusion restaurant at night, dark wood, gold accents, moonlit views" loading="lazy">
+                    </div>
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Modern Fusion</span>
+                        <h2 class="dining-detail-name">Zenith</h2>
+                        <p class="dining-detail-tagline">Asian Soul. Indian Fire. Celestial Height.</p>
+                        <p class="dining-detail-desc">Named for the highest point in the night sky, Zenith is our tribute to the fusion of cultures. Here, the precision of Oriental culinary arts meets the bold, aromatic fire of the Indian tandoor. A premium dining experience that transcends borders.</p>
+
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Cuisine</span><span class="info-value">Modern Asian-Indian Fusion</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Rooftop Pavilion, Interior &amp; Terrace</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">Dinner 19:30–23:30</span></div>
+                            <div class="dining-info-item"><span class="info-label">Reservations</span><span class="info-value">Required</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Small Plates &amp; Starters</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Wasabi Prawns, Apple Salsa</em><span class="dining-dish-price">₹ 1,850</span></div>
+                            <div class="dining-dish-row"><em>Pohpia Tod (Thai Veg Rolls)</em><span class="dining-dish-price">₹ 950</span></div>
+                            <div class="dining-dish-row"><em>Vegetable &amp; Cheese Spring Rolls</em><span class="dining-dish-price">₹ 1,150</span></div>
+                            <div class="dining-dish-row"><em>Oriental Crystal Dimsum</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Fried Chili Wontons, Lemon Sesame Dip</em><span class="dining-dish-price">₹ 980</span></div>
+                            <div class="dining-dish-row"><em>Asparagus Tempura, Cream Cheese</em><span class="dining-dish-price">₹ 1,050</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Indian Delicacies</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Timmuri Chicken Tikka</em><span class="dining-dish-price">₹ 1,600</span></div>
+                            <div class="dining-dish-row"><em>Tawa Boti Lal Maas</em><span class="dining-dish-price">₹ 1,900</span></div>
+                            <div class="dining-dish-row"><em>Paneer Pepper Parsley</em><span class="dining-dish-price">₹ 1,200</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Beverages &amp; Wine</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Zenith Signature Cocktail</em><span class="dining-dish-price">₹ 1,450</span></div>
+                            <div class="dining-dish-row"><em>Corona / Heineken / Bira</em><span class="dining-dish-price">₹ 650</span></div>
+                            <div class="dining-dish-row"><em>Sula Sauvignon (India)</em><span class="dining-dish-price">₹ 950/Glass</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">Fusion</span>
+                            <span class="dining-pill">Rooftop</span>
+                            <span class="dining-pill">Chef's Signature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESTAURANT 8 — THE MOONSTONE DELI -->
+        <section class="dining-detail dining-detail-alt" id="moonstone-deli">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-right">
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Artisan Snackery</span>
+                        <h2 class="dining-detail-name">The Moonstone Deli</h2>
+                        <p class="dining-detail-tagline">Gourmet treasures for moonlit cravings.</p>
+                        <p class="dining-detail-desc">The Moonstone Deli is the heart of late-night indulgence at Merlune. Open 24/7, our artisan pantry offers moon-shaped croissants, hand-rolled chocolates, and gourmet snack hampers perfect for a private movie night in your villa or a midnight picnic on the beach. Every crumb is a celestial treat.</p>
+                        
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Concept</span><span class="info-value">24/7 Artisan Deli</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Grab-and-Go or Terrace</span></div>
+                            <div class="dining-info-item"><span class="info-label">Vibe</span><span class="info-value">Relaxed & Casual</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Artisan Pastries</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Moon-Shaped Buttery Croissant</em><span class="dining-dish-price">₹ 450</span></div>
+                            <div class="dining-dish-row"><em>Mango &amp; Passionfruit Tartlet</em><span class="dining-dish-price">₹ 650</span></div>
+                            <div class="dining-dish-row"><em>Dark Cocoa Éclair, Edible Gold</em><span class="dining-dish-price">₹ 550</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Savoury &amp; Deli</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Cold-Smoked Salmon Bagel</em><span class="dining-dish-price">₹ 1,400</span></div>
+                            <div class="dining-dish-row"><em>Truffle Brie Croque Monsieur</em><span class="dining-dish-price">₹ 1,200</span></div>
+                            <div class="dining-dish-row"><em>Lobster Roll, Brioche, Lemon Butter</em><span class="dining-dish-price">₹ 2,800</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Gourmet Hampers</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Midnight Charcuterie Board</em><span class="dining-dish-price">₹ 3,500</span></div>
+                            <div class="dining-dish-row"><em>Artisan Cheese &amp; Nut Hamper</em><span class="dining-dish-price">₹ 2,200</span></div>
+                            <div class="dining-dish-row"><em>Dark Indigo Truffles (Box of 8)</em><span class="dining-dish-price">₹ 2,100</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">Pantry</span>
+                            <span class="dining-pill">24/7</span>
+                            <span class="dining-pill">Artisan</span>
+                        </div>
+                    </div>
+                    <div class="dining-detail-image">
+                        <img src="imgs/51.png" alt="Moonstone Deli — artisan bakery and snacks at night, warm interior glow" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- RESTAURANT 9 — SALTWATER SNAPS -->
+        <section class="dining-detail" id="saltwater-snaps">
+            <div class="container">
+                <div class="dining-detail-grid dining-detail-left">
+                    <div class="dining-detail-image">
+                        <img src="imgs/52.png" alt="Saltwater Snaps — beachside illuminated snack hut at night with moonlit ocean" loading="lazy">
+                    </div>
+                    <div class="dining-detail-content">
+                        <span class="dining-label">Coastal Small Bites</span>
+                        <h2 class="dining-detail-name">Saltwater Snaps</h2>
+                        <p class="dining-detail-tagline">Quick, vibrant flavors at the ocean's edge.</p>
+                        <p class="dining-detail-desc">Situated directly on the white sands of our private cove, Saltwater Snaps offers casual, barefoot dining. It's the perfect spot for catching the sunset with crispy coastal snacks, refreshing fruit sorbets, and chilled coconut water straight from the shell.</p>
+                        
+                        <div class="dining-info">
+                            <div class="dining-info-item"><span class="info-label">Concept</span><span class="info-value">Beachfront Snacks & Drinks</span></div>
+                            <div class="dining-info-item"><span class="info-label">Setting</span><span class="info-value">Barefoot on the Beach</span></div>
+                            <div class="dining-info-item"><span class="info-label">Hours</span><span class="info-value">11:00 — 19:30</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Crispy Ocean Bites</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Crispy Soft Shell Crab Buns</em><span class="dining-dish-price">₹ 1,200</span></div>
+                            <div class="dining-dish-row"><em>Coconut Crusted Shrimp, Mango Salsa</em><span class="dining-dish-price">₹ 1,450</span></div>
+                            <div class="dining-dish-row"><em>Sea-Salt Sweet Potato Fries</em><span class="dining-dish-price">₹ 550</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Fire &amp; Smoke</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Grilled Calamari Skewers</em><span class="dining-dish-price">₹ 950</span></div>
+                            <div class="dining-dish-row"><em>Andaman Spiced Fish Tacos</em><span class="dining-dish-price">₹ 1,100</span></div>
+                            <div class="dining-dish-row"><em>Charred Corn on the Cob, Chili Lime</em><span class="dining-dish-price">₹ 400</span></div>
+                        </div>
+
+                        <h3 class="dining-signature-title">Chill &amp; Refresh</h3>
+                        <div class="dining-dish-list">
+                            <div class="dining-dish-row"><em>Tropical Dragonfruit Sorbet</em><span class="dining-dish-price">₹ 600</span></div>
+                            <div class="dining-dish-row"><em>Fresh Coconut Water in Shell</em><span class="dining-dish-price">₹ 300</span></div>
+                            <div class="dining-dish-row"><em>Frozen Lychee Margarita</em><span class="dining-dish-price">₹ 950</span></div>
+                        </div>
+
+                        <div class="dining-tags">
+                            <span class="dining-pill">Beachfront</span>
+                            <span class="dining-pill">Casual</span>
+                            <span class="dining-pill">Quick Bites</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PRIVATE DINING CTA
+             Options for bespoke private dining events:
+             beach dinner, overwater pavilion, jungle supper.
+             Links to contact page for arrangements.
+             ============================================ -->
+        <section class="dining-private-cta" id="dining-private">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Private Dining</span>
+                    <h2 class="section-title">Your Table, Your Night</h2>
+                    <p class="section-subtitle">From moonlit beach dinners for two to overwater pavilion celebrations for twenty — our culinary team creates bespoke dining experiences in extraordinary settings across the island.</p>
+                </div>
+                <div class="private-dining-options">
+                    <!-- Option 1: Beach Dinner -->
+                    <div class="private-option">
+                        <span class="private-option-icon">🏖️</span>
+                        <h3>Beach Dinner</h3>
+                        <p>Private table on the sand, candles, personal chef &amp; server. Romantic perfection under the stars.</p>
+                    </div>
+                    <!-- Option 2: Overwater Pavilion -->
+                    <div class="private-option">
+                        <span class="private-option-icon">🏛️</span>
+                        <h3>Overwater Pavilion</h3>
+                        <p>Exclusive use of the overwater pavilion for celebrations, proposals, or intimate gatherings up to 20 guests.</p>
+                    </div>
+                    <!-- Option 3: Jungle Supper -->
+                    <div class="private-option">
+                        <span class="private-option-icon">🌿</span>
+                        <h3>Jungle Supper</h3>
+                        <p>A candlelit long table deep in the rainforest. Fire-cooked courses paired with local spirits. Utterly wild.</p>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="contact.html" class="btn-primary btn-lg" id="arrange-dining-btn">Arrange Private Dining</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ============================================
+         FOOTER — Site-wide footer with brand info,
+         navigation links, contact info, and legal.
+         Shared across all pages.
+         ============================================ -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand identity -->
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+                    <p class="footer-tagline">Where the moon meets the waves.</p>
+                    <p class="footer-address">Private Island, Andaman &amp; Nicobar Islands, India 744101</p>
+                </div>
+                <!-- Column 2: Explore links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="villas.html">Villas</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Guest information -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Guest Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Getting Here</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact details -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-contact">
+                        <li><a href="tel:+911234567890">+91 1234567890</a></li>
+                        <li><a href="mailto:reservations@merlune.com">reservations@merlune.com</a></li>
+                        <li><a href="https://wa.me/911234567890" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Legal bar -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Merlune Resort. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS — Shared site JS for navigation,
+         mobile menu, smooth scrolling, scroll 
+         animations, and moon phase widget.
+         ============================================ -->
+    <script src="js/merlune-main.js"></script>
+</body>
+</html>

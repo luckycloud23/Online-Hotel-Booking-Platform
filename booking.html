@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Merlune Resort — Andaman Islands</title>
+    <meta name="description" content="Book your night escape at Merlune Resort. Choose your villa, select dates, add experiences, and reserve your sanctuary in the Andaman Islands.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="imgs/main_img.png">
+    <!-- HTML: forms and input fields -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+</head>
+<body class="night-sky">
+
+    <!-- NAVIGATION -->
+    <header class="starlight-header" id="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="villas.html" class="nav-link">Villas</a></li>
+                <li><a href="dining.html" class="nav-link">Dining</a></li>
+                <li><a href="spa.html" class="nav-link">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html" class="nav-link">Experiences</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="btn-primary nav-cta active">Book Your Escape</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+        </nav>
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="villas.html">Villas</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-primary mobile-nav-cta active">Book Your Escape</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero page-hero-compact" id="booking-hero">
+            <div class="page-hero-bg" style="background-image: url('imgs/img24.png');"><div class="hero-overlay"></div></div>
+            <div class="page-hero-content">
+                <span class="section-label">Reservations</span>
+                <h1 class="moon-glow">Book Your Night Escape</h1>
+                <p class="page-hero-subtitle">Select your villa, choose your dates, and begin your journey to the Andaman moonlight.</p>
+            </div>
+        </section>
+
+        <!-- BOOKING FLOW -->
+        <section class="booking-section" id="booking-section">
+            <div class="container">
+
+                <!-- Progress Steps -->
+                <div class="booking-progress" id="booking-progress">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Dates &amp; Villa</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Add-Ons</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Guest Details</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-label">Confirm</span>
+                    </div>
+                </div>
+
+                <div class="booking-grid">
+                    <!-- Main Booking Form -->
+                    <div class="booking-form-wrapper">
+
+                        <!-- STEP 1: Dates & Villa Selection -->
+                        <div class="booking-step" id="booking-step-1">
+                            <h2 class="booking-step-title">Choose Your Dates &amp; Villa</h2>
+
+                            <div class="form-group">
+                                <label for="booking-checkin">Check-in Date <span class="required">*</span></label>
+                                <input type="date" id="booking-checkin" name="checkin" required class="form-input glow-focus">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="booking-checkout">Check-out Date <span class="required">*</span></label>
+                                <input type="date" id="booking-checkout" name="checkout" required class="form-input glow-focus">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="booking-guests">Number of Guests <span class="required">*</span></label>
+                                <select id="booking-guests" name="guests" required class="form-select glow-focus">
+                                    <option value="">Select</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6">6+ Guests</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Select Your Villa <span class="required">*</span></label>
+                                <div class="villa-selector" id="villa-selector">
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="lagoon-water-villa" id="villa-opt-lagoon">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img4.png" alt="Lagoon Water Villa" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Lagoon Water Villa</strong>
+                                                <span>Overwater · 145 sqm · From ₹85,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="ocean-pavilion-suite" id="villa-opt-ocean">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img5.png" alt="Ocean Pavilion Suite" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Ocean Pavilion Suite</strong>
+                                                <span>Clifftop · 210 sqm · From ₹1,10,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="garden-sanctuary-villa" id="villa-opt-garden">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img6.png" alt="Garden Sanctuary Villa" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Garden Sanctuary Villa</strong>
+                                                <span>Garden · 120 sqm · From ₹65,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="coral-beach-suite" id="villa-opt-coral">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img7.png" alt="Coral Beach Suite" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Coral Beach Suite</strong>
+                                                <span>Beach · 160 sqm · From ₹75,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                     <label class="villa-radio-card">
+                                         <input type="radio" name="villa" value="moonlight-forest-villa" id="villa-opt-forest">
+                                         <div class="villa-radio-content">
+                                             <img src="imgs/moonlight_forest_villa.png" alt="Moonlight Forest Villa" loading="lazy">
+                                             <div class="villa-radio-info">
+                                                 <strong>Moonlight Forest Villa</strong>
+                                                 <span>Jungle · 130 sqm · From ₹70,000/night</span>
+                                             </div>
+                                         </div>
+                                     </label>
+ 
+                                     <label class="villa-radio-card">
+                                         <input type="radio" name="villa" value="starlight-cove-villa" id="villa-opt-cove">
+                                         <div class="villa-radio-content">
+                                             <img src="imgs/starlight_cove_villa.png" alt="Starlight Cove Villa" loading="lazy">
+                                             <div class="villa-radio-info">
+                                                 <strong>Starlight Cove Villa</strong>
+                                                 <span>Secret Cove · 180 sqm · From ₹95,000/night</span>
+                                             </div>
+                                         </div>
+                                     </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="astral-overwater-suite" id="villa-opt-astral">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img20.png" alt="Astral Overwater Suite" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Astral Overwater Suite</strong>
+                                                <span>Lagoon · 220 sqm · From ₹1,05,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="indigo-pavilion" id="villa-opt-indigo">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/hotel_indigo.png" alt="Indigo Pavilion" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Indigo Pavilion</strong>
+                                                <span>Overwater · 165 sqm · From ₹90,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="villa-radio-card">
+                                        <input type="radio" name="villa" value="presidential-estate" id="villa-opt-presidential">
+                                        <div class="villa-radio-content">
+                                            <img src="imgs/img8.png" alt="Presidential Estate" loading="lazy">
+                                            <div class="villa-radio-info">
+                                                <strong>Presidential Estate</strong>
+                                                <span>Flagship Headland Estate · 650 sqm · From ₹3,50,000/night</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn-primary btn-lg booking-next" id="booking-next-1" data-next="2">Continue to Add-Ons</button>
+                        </div>
+
+                        <!-- STEP 2: Add-Ons -->
+                        <div class="booking-step" id="booking-step-2" hidden>
+                            <h2 class="booking-step-title">Enhance Your Stay</h2>
+                            <p class="booking-step-desc">Select any add-ons to make your escape unforgettable.</p>
+
+                            <div class="addons-grid">
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="floating-breakfast" id="addon-breakfast">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">🌅</span>
+                                        <strong>Floating Breakfast</strong>
+                                        <p>Daily floating breakfast delivered to your villa</p>
+                                        <span class="addon-price">₹3,500/day</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="moonlight-dinner" id="addon-dinner">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">🏖️</span>
+                                        <strong>Moonlit Beach Dinner</strong>
+                                        <p>Private dinner for two on the beach with personal chef</p>
+                                        <span class="addon-price">₹18,000</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="bio-kayak" id="addon-kayak">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">🌊</span>
+                                        <strong>Bioluminescent Kayak</strong>
+                                        <p>90-minute night kayaking in glowing waters</p>
+                                        <span class="addon-price">₹5,000/person</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="telescope" id="addon-telescope">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">🔭</span>
+                                        <strong>Telescope Rental</strong>
+                                        <p>Professional telescope delivered to your villa deck</p>
+                                        <span class="addon-price">₹2,000/night</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="spa-package" id="addon-spa">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">🧖</span>
+                                        <strong>Spa Welcome Package</strong>
+                                        <p>Couples massage + Moonwater Ritual on your first day</p>
+                                        <span class="addon-price">₹22,000</span>
+                                    </div>
+                                </label>
+
+                                <label class="addon-card">
+                                    <input type="checkbox" name="addon" value="all-inclusive" id="addon-allinc">
+                                    <div class="addon-content">
+                                        <span class="addon-icon">✨</span>
+                                        <strong>All-Inclusive Package</strong>
+                                        <p>All meals, beverages, 2 spa treatments, 1 experience</p>
+                                        <span class="addon-price">₹35,000/day</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="booking-nav-buttons">
+                                <button class="btn-outline booking-prev" id="booking-prev-2" data-prev="1">← Back</button>
+                                <button class="btn-primary btn-lg booking-next" id="booking-next-2" data-next="3">Continue to Guest Details</button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Guest Details -->
+                        <div class="booking-step" id="booking-step-3" hidden>
+                            <h2 class="booking-step-title">Guest Details</h2>
+                            <p class="booking-step-desc">No account required. We respect your privacy and the quiet.</p>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-first-name">First Name <span class="required">*</span></label>
+                                    <input type="text" id="guest-first-name" name="first_name" required class="form-input glow-focus">
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-last-name">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="guest-last-name" name="last_name" required class="form-input glow-focus">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guest-email">Email <span class="required">*</span></label>
+                                    <input type="email" id="guest-email" name="email" required class="form-input glow-focus" placeholder="your@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="guest-phone">Phone <span class="required">*</span></label>
+                                    <input type="tel" id="guest-phone" name="phone" required class="form-input glow-focus" placeholder="+91 000 000 0000">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-country">Country of Residence</label>
+                                <input type="text" id="guest-country" name="country" class="form-input glow-focus" placeholder="India">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-requests">Special Requests</label>
+                                <textarea id="guest-requests" name="requests" rows="3" class="form-textarea glow-focus" placeholder="Dietary needs, celebrations, accessibility requirements..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guest-arrival">Preferred Transfer</label>
+                                <select id="guest-arrival" name="transfer" class="form-select glow-focus">
+                                    <option value="">Select transfer type</option>
+                                    <option value="seaplane">Seaplane from Port Blair (45 min)</option>
+                                    <option value="speedboat">Private Speedboat (90 min)</option>
+                                    <option value="arrange-later">I'll arrange later</option>
+                                </select>
+                            </div>
+
+                            <div class="booking-nav-buttons">
+                                <button class="btn-outline booking-prev" id="booking-prev-3" data-prev="2">← Back</button>
+                                <button class="btn-primary btn-lg booking-next" id="booking-next-3" data-next="4">Review Booking</button>
+                            </div>
+                        </div>
+
+                        <!-- STEP 4: Review & Confirm -->
+                        <div class="booking-step" id="booking-step-4" hidden>
+                            <h2 class="booking-step-title">Review &amp; Confirm</h2>
+
+                            <div class="booking-summary" id="booking-summary">
+                                <div class="summary-section">
+                                    <h3>Your Stay</h3>
+                                    <div class="summary-row">
+                                        <span>Villa</span>
+                                        <span id="summary-villa">—</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Check-in</span>
+                                        <span id="summary-checkin">—</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Check-out</span>
+                                        <span id="summary-checkout">—</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Guests</span>
+                                        <span id="summary-guests">—</span>
+                                    </div>
+                                </div>
+
+                                <div class="summary-section">
+                                    <h3>Add-Ons</h3>
+                                    <div id="summary-addons">
+                                        <p class="summary-empty">No add-ons selected</p>
+                                    </div>
+                                </div>
+
+                                <div class="summary-section">
+                                    <h3>Guest</h3>
+                                    <div class="summary-row">
+                                        <span>Name</span>
+                                        <span id="summary-name">—</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Email</span>
+                                        <span id="summary-email">—</span>
+                                    </div>
+                                </div>
+
+                                <div class="summary-total">
+                                    <span>Estimated Total</span>
+                                    <span id="summary-total">Calculated on confirmation</span>
+                                </div>
+                            </div>
+
+                            <p class="booking-note">This is a reservation request. Our team will confirm availability and final pricing within 24 hours via email. No payment is required at this stage.</p>
+
+                            <div class="booking-nav-buttons">
+                                <button class="btn-outline booking-prev" id="booking-prev-4" data-prev="3">← Back</button>
+                                <button class="btn-primary btn-lg" id="booking-confirm-btn">Confirm Reservation Request</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Sidebar -->
+                    <aside class="booking-sidebar" id="booking-sidebar">
+                        <div class="sidebar-card">
+                            <h3>Need Help?</h3>
+                            <p>Our reservations team is available to assist you personally.</p>
+                            <ul class="sidebar-contact">
+                                <li><a href="tel:+911234567890">📞 +91 1234567890</a></li>
+                                <li><a href="mailto:reservations@merlune.com">✉️ reservations@merlune.com</a></li>
+                                <li><a href="https://wa.me/911234567890" target="_blank" rel="noopener">☽ WhatsApp</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3>Good to Know</h3>
+                            <ul class="sidebar-notes">
+                                <li>✓ No account required — guest checkout</li>
+                                <li>✓ Free cancellation up to 14 days before arrival</li>
+                                <li>✓ Full moon weekends: premium rates apply</li>
+                                <li>✓ Seaplane/speedboat transfers bookable separately</li>
+                            </ul>
+                        </div>
+
+                        <!-- Moon phase mini -->
+                        <div class="sidebar-card moon-card">
+                            <h3>Moon Phase at Merlune</h3>
+                            <div class="moon-phase-mini" id="booking-moon-phase">
+                                <span class="moon-emoji-sm">🌔</span>
+                                <span>Waxing Gibbous</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo"><span class="logo-icon">☽</span><span class="logo-text">Merlune</span></a>
+                    <p class="footer-tagline">Where the moon meets the waves.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="villas.html">Villas</a></li>
+                        <li><a href="dining.html">Dining</a></li>
+                        <li><a href="spa.html">Spa &amp; Wellness</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Guest Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="booking.html">Reservations</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-contact">
+                        <li><a href="tel:+911234567890">+91 1234567890</a></li>
+                        <li><a href="mailto:reservations@merlune.com">reservations@merlune.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Merlune Resort. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/merlune-main.js"></script>
+    <script src="js/merlune-booking.js"></script>
+</body>
+</html>
